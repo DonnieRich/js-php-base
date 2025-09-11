@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>innerHTML Loop Performance</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    button { margin: 0.5rem; padding: 0.5rem 1rem; }
+    li { padding: 2px 0; }
+  </style>
+</head>
+<body>
+  <h1>innerHTML Performance Trap</h1>
+  <button id="slow">Lento (inserimento ad ogni iterazione)</button>
+  <button id="fast">Veloce (unico inserimento a fine loop)</button>
+  <ul id="list"></ul>
+
+  <script src="./main.js"></script>
+</body>
+</html>
