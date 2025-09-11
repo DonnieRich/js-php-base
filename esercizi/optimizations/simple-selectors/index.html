@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Modules Separation</title>
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="./tablet.css" media="screen and (width >= 768px)">
-<link rel="stylesheet" href="./desktop.css" media="screen and (width >= 992px)">
+<style>
+    div#main-section .post h2.title {
+        color: blue;
+    }
+
+    .title {
+        color: blue;
+    }
+</style>
 </head>
 <body>
     <h1>CSS Modules Separation Example</h1>
