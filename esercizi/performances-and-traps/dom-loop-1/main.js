@@ -33,3 +33,31 @@ document.getElementById("string").addEventListener("click", () => {
     list.innerHTML = listItems;
     console.timeEnd("string");
 });
+
+// Usare DocumentFragment
+document.getElementById("fragment").addEventListener("click", () => {
+    clearList();
+    console.time("fragment");
+    const fragment = document.createDocumentFragment();
+    for(const item of items) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        fragment.append(li);
+    }
+    list.appendChild(fragment);
+    console.timeEnd("fragment");
+});
+
+// Usare singolo append con array di nodi
+document.getElementById("singleAppend").addEventListener("click", () => {
+    clearList();
+    console.time("singleAppend");
+    const nodes = [];
+    for(const item of items) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        nodes.push(li);
+    }
+    list.append(...nodes);
+    console.timeEnd("singleAppend");
+});

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Thrashing Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 1rem;
+        }
+
+        .box {
+            width: 100px;
+            height: 20px;
+            margin: 2px;
+            background: lightblue;
+        }
+
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Layout Thrashing</h1>
+    <button id="readWrite">Read + Write</button>
+    <button id="batch">Batch</button>
+
+    <div id="container"></div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
