@@ -8164,6 +8164,16 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
+.optimized-hero {
+  contain: paint;
+  height: 350px;
+}
+
+.optimized-nav {
+  contain: paint;
+  contain-intrinsic-size: auto 60px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -8197,6 +8207,11 @@ body {
 /* Footer */
 footer {
   margin-top: 40px;
+}
+
+.optimized-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 550px;
 }
 
 /*# sourceMappingURL=style.css.map */

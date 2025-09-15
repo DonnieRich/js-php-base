@@ -63,6 +63,18 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
+.optimized-hero {
+  // content-visibility: auto;
+  // contain-intrinsic-size: auto 350px;
+  contain: paint;
+  height: 350px;
+}
+
+.optimized-nav {
+  contain: paint;
+  contain-intrinsic-size: auto 60px;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -93,4 +105,9 @@ body {
 /* Footer */
 footer {
   margin-top: 40px;
+}
+
+.optimized-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 550px;
 }

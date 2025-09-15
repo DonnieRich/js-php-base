@@ -9,16 +9,16 @@ function clearList() {
 document.getElementById("appendChild").addEventListener("click", () => {
     clearList();
     console.time("appendChild");
-    // items.forEach(item => {
-    //     const li = document.createElement("li");
-    //     li.textContent = item;
-    //     list.appendChild(li);
-    // });
-    for(const item of items) {
+    items.forEach(item => {
         const li = document.createElement("li");
         li.textContent = item;
         list.appendChild(li);
-    }
+    });
+    // for(const item of items) {
+    //     const li = document.createElement("li");
+    //     li.textContent = item;
+    //     list.appendChild(li);
+    // }
     console.timeEnd("appendChild");
 });
 

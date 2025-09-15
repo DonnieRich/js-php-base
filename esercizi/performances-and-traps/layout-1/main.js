@@ -23,17 +23,17 @@ document.getElementById("readWrite").addEventListener("click", () => {
 document.getElementById("batch").addEventListener("click", () => {
     console.time("batch");
     const widths = [];
-    boxes.forEach(box => widths.push(box.offsetWidth));
-    boxes.forEach((box, i) => box.style.width = widths[i] + 10 + "px");
+    // boxes.forEach(box => widths.push(box.offsetWidth));
+    // boxes.forEach((box, i) => box.style.width = widths[i] + 10 + "px");
 
-    // for(let i = 0; i < boxes.length; i++) {
-    //     const box = boxes[i];
-    //     widths.push(box.offsetWidth);
-    // }
-    // for(let i = 0; i < boxes.length; i++) {
-    //     const box = boxes[i];
-    //     box.style.width = widths[i] + 10 + "px";
-    // }
+    for(let i = 0; i < boxes.length; i++) {
+        const box = boxes[i];
+        widths.push(box.offsetWidth);
+    }
+    for(let i = 0; i < boxes.length; i++) {
+        const box = boxes[i];
+        box.style.width = widths[i] + 10 + "px";
+    }
 
     console.timeEnd("batch");
 });

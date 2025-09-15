@@ -6,13 +6,18 @@
     <title>Modern E-Commerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
-    <link rel="preload" href="/img/jumbo.webp" as="image" type="image/webp">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Mogra&display=fallback" rel="stylesheet"> -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" fetchpriority=high href="/img/jumbo.webp" as="image" type="image/webp">
+    <link rel="preload" href="/img/first-image.webp" as="image" type="image/webp">
+    <link rel="preconnect" href="https://picsum.photos">
+    <link rel="preconnect" href="https://fastly.picsum.photos" crossorigin>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top optimized-nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">ShopZen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,8 +42,19 @@
         </div>
     </nav>
 
+    <!-- <section class="promo-section bg-light text-center p-5 my-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold">Exclusive Offer!</h2>
+            <p class="lead">Check out our limited-time collection.</p>
+            <img src="/img/first-image.webp" class="img-fluid rounded shadow-lg my-4" alt="Special Promotion Image">
+            <div>
+                <a href="#" class="btn btn-success btn-lg">Explore Now</a>
+            </div>
+        </div>
+    </section> -->
+
     <!-- Hero Section -->
-    <header class="hero-section text-white text-center">
+    <header class="hero-section text-white text-center optimized-hero">
         <div class="container">
             <h1 class="display-4">Discover Your Style <i id="heart"></i></h1>
             <p class="lead">Browse our collection of the latest fashion trends.</p>
@@ -46,7 +62,6 @@
         </div>
     </header>
 
-    <!-- ADD A NICE BIG SECTION USING THE /img/first-image.webp FILE -->
 
     <!-- Products Section -->
     <main class="container my-5">
@@ -54,8 +69,10 @@
         <div class="row">
             <!-- Product Card 1 -->
             <div class="col-md-4 mb-4">
-                <div class="card product-card h-100">
-                    <img src="https://picsum.photos/seed/fashion1/300" class="card-img-top" alt="Product Image">
+                <div class="card product-card optimized-card h-100">
+                    <picture>
+                        <img src="https://picsum.photos/seed/fashion1/300" width="300" height="300" class="card-img-top" alt="Product Image">
+                    </picture>
                     <div class="card-body">
                         <h5 class="card-title">Stylish T-Shirt</h5>
                         <p class="card-text">A comfortable and stylish t-shirt for everyday wear.</p>
@@ -66,8 +83,10 @@
             </div>
             <!-- Product Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card product-card h-100">
-                    <img src="https://picsum.photos/seed/fashion2/300" class="card-img-top" alt="Product Image">
+                <div class="card product-card optimized-card h-100">
+                    <picture>
+                        <img src="https://picsum.photos/seed/fashion2/300" width="300" height="300" class="card-img-top" alt="Product Image">
+                    </picture>
                     <div class="card-body">
                         <h5 class="card-title">Modern Jeans</h5>
                         <p class="card-text">Perfectly fitted jeans for a modern look.</p>
@@ -78,8 +97,10 @@
             </div>
             <!-- Product Card 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card product-card h-100">
-                    <img src="https://picsum.photos/seed/fashion3/300" class="card-img-top" alt="Product Image">
+                <div class="card product-card optimized-card h-100">
+                    <picture>
+                        <img src="https://picsum.photos/seed/fashion3/300" width="300" height="300" class="card-img-top" alt="Product Image">
+                    </picture>
                     <div class="card-body">
                         <h5 class="card-title">Classic Sneakers</h5>
                         <p class="card-text">Timeless sneakers that match any outfit.</p>

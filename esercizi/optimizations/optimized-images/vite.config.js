@@ -4,7 +4,7 @@ import {browserslistToTargets} from 'lightningcss';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-//   base: 'http://127.0.0.1:5500/esercizi/optimizations/optimized-font-awesome/dist/',
+  // base: 'http://127.0.0.1:5500/esercizi/optimizations/optimized-images/dist/',
   css: {
     transformer: 'lightningcss',
     lightningcss: {
